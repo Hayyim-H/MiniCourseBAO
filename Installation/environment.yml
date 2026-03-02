@@ -1,0 +1,32 @@
+name: BAOEnv
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - numpy=1.26.4
+  - scipy
+  - cython
+  - gsl
+  - c-compiler
+  - cxx-compiler
+  - fftw
+  - mpi4py
+  - openmpi
+  - matplotlib
+  - pandas
+  - pip
+  - pip:
+      - classy
+      - cobaya
+      - camb
+      - jax
+      - jaxlib
+      - iminuit
+      - "pycorr @ git+https://github.com/cosmodesi/pycorr"
+      - "cosmoprimo[astropy,extras] @ git+https://github.com/cosmodesi/cosmoprimo"
+      - "pypower @ git+https://github.com/cosmodesi/pypower"
+      - "desilike[plotting,jax] @ git+https://github.com/cosmodesi/desilike"
+      - "pyclass @ git+https://github.com/adematti/pyclass"
+      - anesthetic
+      - zeus-mcmc
