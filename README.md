@@ -16,4 +16,4 @@ Before doing anything, it is necessary to install the parallelization packages f
  # Debian based Linux (Ubuntu/Mint/CentOS)
  conda install -y -c conda-forge libgomp gsl
 ```
-Once 
+Once you have that installed, you need to download the [environment.yml](Installation/environment.yml) file
