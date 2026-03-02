@@ -16,4 +16,8 @@ Before doing anything, it is necessary to install the parallelization packages f
  # Debian based Linux (Ubuntu/Mint/CentOS)
  conda install -y -c conda-forge libgomp gsl
 ```
-Once you have that installed, you need to download the [environment.yml](Installation/environment.yml) file
+Once you have that installed, you need to download the [environment.yml](Installation/environment.yml) file, which contains the python configuration to create the **BAOEnv** enviroment. You need to use 
+```bash
+ conda env create -f environment.yml
+```
+
