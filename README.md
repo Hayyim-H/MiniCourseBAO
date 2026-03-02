@@ -11,9 +11,5 @@ Before doing anything, it is necessary to install the parallelization packages f
 ```bash
  # MacOS
  conda install -y -c conda-forge llvm-openmp gsl
-#
-```bash
- # Debian based Linux (Ubuntu/Mint/CentOS)
- conda install -y -c conda-forge libgomp gsl
-#
-Once 
+
+
