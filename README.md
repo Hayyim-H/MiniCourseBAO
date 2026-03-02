@@ -5,7 +5,7 @@ Short talk given by @hugoriv18 and @Hayyim-H for the BAO physics and its numeric
 
 This course uses different python packages incompatibles with Windows, so it is imperative to use Linux or MacOS, or Windows with a Virtual Machine. Another requirement is having conda. 
 
-### Installation:
+### Enviroment installation:
 
 Before doing anything, it is necessary to install the parallelization packages for your specific OS:
 ```bash
