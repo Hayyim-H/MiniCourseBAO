@@ -8,12 +8,12 @@ This course uses different python packages incompatibles with Windows, so it is 
 ### Enviroment installation:
 
 Before doing anything, it is necessary to install the parallelization packages for your specific OS:
+> MacOS
 ```bash
- # MacOS
  conda install -y -c conda-forge llvm-openmp gsl
 ```
+> Debian based Linux (Ubuntu/Mint/CentOS)
 ```bash
- # Debian based Linux (Ubuntu/Mint/CentOS)
  conda install -y -c conda-forge libgomp gsl
 ```
 Once you have that installed, you need to download the [environment.yml](Installation/environment.yml) file, which contains the python configuration to create the **BAOEnv** enviroment. You need to use 
