@@ -27,3 +27,6 @@ If you are unable to install the environment then you can't run the notebook for
 ```bash
  pip install cobaya getdist maplotlib
 ```
+## Slides
+
+https://docs.google.com/presentation/d/1TRyD4k_X_BrVIjiWdOBJnoWewKeuhG-9xx7ZNkE5VHg/edit?usp=sharing
