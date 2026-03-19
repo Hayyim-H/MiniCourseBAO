@@ -4,7 +4,6 @@ channels:
   - nodefaults
 dependencies:
   - python=3.12
-  - numpy=1.26.4
   - scipy
   - cython
   - gsl
@@ -19,6 +18,7 @@ dependencies:
   - pip
   - pip:
       - classy
+      - numpy==1.26.4
       - cobaya
       - camb
       - jax
