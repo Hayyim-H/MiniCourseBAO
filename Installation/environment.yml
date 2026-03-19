@@ -26,7 +26,7 @@ dependencies:
       - "pycorr @ git+https://github.com/cosmodesi/pycorr"
       - "cosmoprimo[astropy,extras] @ git+https://github.com/cosmodesi/cosmoprimo"
       - "pypower @ git+https://github.com/cosmodesi/pypower"
-      - "desilike[plotting,jax] @ git+https://github.com/cosmodesi/desilike@152d3a5"
+      - "desilike[plotting,jax] @ git+https://github.com/cosmodesi/desilike@152d3a545d793deffd59bcce543dc9f2f9ab9869"
       - "pyclass @ git+https://github.com/adematti/pyclass"
       - anesthetic
       - zeus-mcmc
