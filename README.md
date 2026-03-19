@@ -7,17 +7,23 @@ This course uses different python packages incompatibles with Windows, so it is 
 
 ### Enviroment installation:
 
-Before doing anything, it is necessary to install the parallelization packages for your specific OS:
-> MacOS
+For Debian based Linux (Ubuntu/Mint/CentOS), you need to download the [environment_Linux.yml](Installation/environment_Linux.yml) file which contains the python configuration to create the **BAOEnv** environment. Then you only need to use
 ```bash
- conda install -y -c conda-forge llvm-openmp gsl
+ conda env create -f environment_Linux.yml
 ```
-> Debian based Linux (Ubuntu/Mint/CentOS)
+For MacOS with Apple Silicon, the process it's different. First download the [environment_Mac.yml](Installation/environment_Mac.yml) file and use
 ```bash
- conda install -y -c conda-forge libgomp gsl
+ conda env create -f environment_Mac.yml
 ```
-Once you have that installed, you need to download the [environment.yml](Installation/environment.yml) file, which contains the python configuration to create the **BAOEnv** environment. You need to use 
+After that, you must navigate to the folder [Wheels/](Installation/Wheels/), activate the environment
 ```bash
- conda env create -f environment.yml
+ conda activate BAOEnv
 ```
-
+and install those packages with
+```bash
+ pip install *.whl
+```
+If you are unable to install the environment then you can't run the notebook for @hugoriv18's talk. But you can create and new environment and install the basics for @Hayyim-H's talk with
+```bash
+ pip install cobaya getdist maplotlib
+```
