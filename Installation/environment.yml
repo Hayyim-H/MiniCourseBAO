@@ -8,6 +8,7 @@ dependencies:
   - scipy
   - cython
   - gsl
+  - libgomp
   - c-compiler
   - cxx-compiler
   - fftw
@@ -23,7 +24,6 @@ dependencies:
       - jax
       - jaxlib
       - iminuit
-      - "lsstypes @ git+https://github.com/adematti/lsstypes"
       - "pycorr @ git+https://github.com/cosmodesi/pycorr"
       - "cosmoprimo[astropy] @ git+https://github.com/cosmodesi/cosmoprimo"
       - "pypower @ git+https://github.com/cosmodesi/pypower"
