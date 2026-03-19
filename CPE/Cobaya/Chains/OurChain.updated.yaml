@@ -1,0 +1,136 @@
+theory:
+  classy:
+    path: null
+    speed: 0.2
+    stop_at_error: false
+    extra_args:
+      ln_A_s_1e10: 3.036
+      n_s: 0.9649
+      tau_reio: 0.0544
+    ignore_obsolete: false
+    renames:
+      As: A_s
+      ns: n_s
+      nrun: alpha_s
+      nrunrun: beta_s
+      nt: n_t
+      ntrun: alpha_t
+      rdrag: rs_drag
+      omegak: Omega_k
+      omegal: Omega_Lambda
+      w: w0_fld
+      wa: wa_fld
+      omegabh2: omega_b
+      omegab: Omega_b
+      omegach2: omega_cdm
+      omegac: Omega_cdm
+      omegam: Omega_m
+      omegan: Omega_nu
+      tau: tau_reio
+      zrei: z_reio
+      deltazrei: reionization_width
+      helium_redshift: helium_fullreio_redshift
+      helium_delta_redshift: helium_fullreio_width
+      yhe: YHe
+      yheused: YHe
+    version: v3.3.4
+    input_params:
+    - Omega_m
+    - H0
+    output_params:
+    - rs_drag
+    - Omega_Lambda
+    - age
+    - omegam
+likelihood:
+  BAO.desi2025_all:
+    type: []
+    speed: -1
+    stop_at_error: false
+    version: null
+    python_path: /home/hayyim/Escritorio/CursoBAO/CPE/Likelihood/
+    data_file: /home/hayyim/Escritorio/CursoBAO/CPE/Data/means.txt
+    cov_file: /home/hayyim/Escritorio/CursoBAO/CPE/Data/covmat.txt
+    input_params: []
+    output_params: []
+params:
+  Omega_m:
+    prior:
+      min: 0.1
+      max: 0.9
+    ref:
+      dist: norm
+      loc: 0.315
+      scale: 0.01
+    proposal: 0.01
+    latex: \Omega_\mathrm{m}
+    renames:
+    - omegam
+  omegamh2:
+    derived: 'lambda omegam, H0: omegam*(H0/100)**2'
+    latex: \Omega_\mathrm{m} h^2
+  H0:
+    prior:
+      min: 40.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 67.36
+      scale: 1.0
+    proposal: 1.0
+    latex: H_0
+  rs_drag:
+    latex: r_\mathrm{d}
+    derived: true
+    renames:
+    - rdrag
+  Omega_Lambda:
+    latex: \Omega_\Lambda
+    derived: true
+    renames:
+    - omegal
+  age:
+    latex: \mathrm{Age}/\mathrm{Gyr}
+    derived: true
+  H0rdrag:
+    derived: 'lambda H0, rs_drag: H0 * rs_drag'
+    latex: H_0 r_\mathrm{d}
+sampler:
+  mcmc:
+    sampler_type: mcmc
+    supports_periodic_params: true
+    burn_in: 0
+    max_tries: 1000
+    covmat: null
+    covmat_params: null
+    proposal_scale: 1.9
+    output_every: 60s
+    learn_every: 40d
+    temperature: 1
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 2.0
+    learn_proposal_Rminus1_max_early: 30.0
+    learn_proposal_Rminus1_min: 0.0
+    max_samples: .inf
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.02
+    Rminus1_cl_level: 0.95
+    Rminus1_single_split: 4
+    measure_speeds: true
+    oversample_power: 0.4
+    oversample_thin: true
+    drag: false
+    blocking:
+    - - 1
+      - - Omega_m
+        - H0
+    callback_function: null
+    callback_every: null
+    seed: null
+    check_every: null
+    oversample: null
+    drag_limits: null
+    fallback_covmat_scale: 4
+    version: '3.6'
+output: OurChain
+version: '3.6'

@@ -1,0 +1,14 @@
+# [z] [value] [distance]
+0.295 7.942 DV_over_rs
+0.510 13.588 DM_over_rs
+0.510 21.863 DH_over_rs
+0.706 17.351 DM_over_rs
+0.706 19.455 DH_over_rs
+0.934 21.576 DM_over_rs
+0.934 17.641 DH_over_rs
+1.321 27.601 DM_over_rs
+1.321 14.176 DH_over_rs
+1.484 30.512 DM_over_rs
+1.484 12.817 DH_over_rs
+2.330 38.988 DM_over_rs
+2.330 8.632 DH_over_rs

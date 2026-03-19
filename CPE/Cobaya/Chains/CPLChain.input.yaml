@@ -1,0 +1,69 @@
+theory:
+  classy:
+    extra_args:
+      ln_A_s_1e10: 3.036
+      n_s: 0.9649
+      tau_reio: 0.0544
+      Omega_Lambda: 0
+likelihood:
+  BAO.desi2025_all:
+    python_path: /home/hayyim/Escritorio/CursoBAO/CPE/Likelihood/
+    data_file: /home/hayyim/Escritorio/CursoBAO/CPE/Data/means.txt
+    cov_file: /home/hayyim/Escritorio/CursoBAO/CPE/Data/covmat.txt
+params:
+  Omega_m:
+    prior:
+      min: 0.1
+      max: 0.9
+    ref:
+      dist: norm
+      loc: 0.315
+      scale: 0.01
+    proposal: 0.01
+    latex: \Omega_\mathrm{m}
+  omegamh2:
+    derived: 'lambda omegam, H0: omegam*(H0/100)**2'
+    latex: \Omega_\mathrm{m} h^2
+  H0:
+    prior:
+      min: 40.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 67.36
+      scale: 1.0
+    proposal: 1.0
+    latex: H_0
+  w0_fld:
+    prior:
+      min: -3
+      max: 1
+    ref: -1
+    proposal: 1.0
+    latex: \omega_0
+  wa_fld:
+    prior:
+      min: -3
+      max: 2
+    ref: 0
+    proposal: 1.0
+    latex: \omega_a
+  rs_drag:
+    latex: r_\mathrm{d}
+  Omega_Lambda:
+    latex: \Omega_\Lambda
+  age:
+    latex: \mathrm{Age}/\mathrm{Gyr}
+  H0rdrag:
+    derived: 'lambda H0, rs_drag: H0 * rs_drag'
+    latex: H_0 r_\mathrm{d}
+sampler:
+  mcmc:
+    drag: false
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: null
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.02
+    max_tries: 1000
+output: OurChain
