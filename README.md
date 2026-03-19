@@ -23,7 +23,7 @@ and install those packages with
 ```bash
  pip install *.whl
 ```
-If you are unable to install the environment then you can't run the notebook for @hugoriv18's talk. But you can create and new environment and install the basics for @Hayyim-H's talk with
+If you are unable to install the environment then you can't run the notebook for @hugoriv18's talk. But you can create a new environment and install the basics for @Hayyim-H's talk with
 ```bash
  pip install cobaya getdist maplotlib
 ```
